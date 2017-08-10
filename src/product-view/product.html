@@ -1,0 +1,21 @@
+<main>
+	<div layout="column" layout-gt-sm="row" layout-padding>
+		<div layout="column" flex-gt-sm="50" >
+			<product-title product="$resolve.product"></product-title>
+			<product-images images="$resolve.product.Images"></product-images>
+			<product-reviews hide show-gt-sm customer-review="$resolve.product.CustomerReview"></product-reviews>
+		</div>
+		<div layout="column" flex-gt-sm="50">
+			<product-offers offers="$resolve.product.Offers"></product-offers>
+			<product-promotions promotions="$resolve.product.Promotions"></product-promotions>
+			<product-buy product="$resolve.product"></product-buy>
+			<product-return return-policy="$resolve.product.ReturnPolicy"></product-return>
+			<product-share></product-share>
+			<product-description item-description="$resolve.product.ItemDescription"></product-description>
+			<product-reviews hide-gt-sm customer-review="$resolve.product.CustomerReview"></product-reviews>
+		</div>
+	</div>
+
+
+
+</main>

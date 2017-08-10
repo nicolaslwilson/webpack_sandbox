@@ -1,0 +1,34 @@
+<div layout="row" layout-padding>
+	<div class="overall-rating" flex="50">
+		<p class="md-title"><span ng-bind-html="vm.getStarRating(vm.overallRating)"></span> overall</p>
+	</div>
+	<div class="all-reviews" flex="50">
+		<p class="md-title">view all {{vm.totalReviews}} reviews</p>
+	</div>
+</div>
+<div class="reviews-container" layout="column" layout-padding>
+	<div layout="row">
+		<div flex="50">
+			<h6 class="md-title">PRO</h6>
+			<p class="md-caption">most helpful 4-5 star review</p>
+		</div>
+		<div flex="50">
+			<h6 class="md-title">CON</h6>
+			<p class="md-caption">most helpful 1-2 star review</p>
+		</div>
+	</div>
+	<div layout="row" layout-padding>
+		<div class="review" layout="column" flex="50">
+			<div ng-bind-html="vm.getStarRating(vm.customerReviewPro.overallRating)"></div>
+			<h6 class="md-title">{{vm.customerReviewPro.title}}</h6>
+			<p class="md-body-1">{{vm.customerReviewPro.review}}</p>
+			<div class="review-author md-caption"><a href="#">{{vm.customerReviewPro.screenName}}</a> {{vm.customerReviewPro.datePosted | date: format: 'mm'}}</div>
+		</div>
+		<div class="review" layout="column" flex="50">
+			<div ng-bind-html="vm.getStarRating(vm.customerReviewCon.overallRating)"></div>
+			<h6 class="md-title">{{vm.customerReviewCon.title}}</h6>
+			<p  class="md-body-1">{{vm.customerReviewCon.review}}</p>
+			<div class="review-author md-caption"><a href="#">{{vm.customerReviewCon.screenName}}</a> {{vm.customerReviewCon.datePosted | date: format: "short"}}</div>
+		</div>
+	</div>
+</div>

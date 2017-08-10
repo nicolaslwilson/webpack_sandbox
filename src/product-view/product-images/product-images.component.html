@@ -1,0 +1,18 @@
+<div>
+	<img ng-repeat="image in vm.carouselImages track by $index" ng-show="$index == vm.currentIndex" ng-src="{{image.image}}" alt="$index">
+</div>
+<div layout="row" layout-align="center">
+	<md-button ng-click="vm.previousImage()"><i class="material-icons">keyboard_arrow_left</i></md-button>
+	<img	class="product-thumb"
+				ng-src="{{vm.carouselImages[vm.previousIndex()].image}}"
+				ng-click="vm.previousImage()">
+	<img	class="product-thumb"
+				ng-src="{{vm.carouselImages[vm.currentIndex].image}}">
+	<img	class="product-thumb"
+				ng-src="{{vm.carouselImages[vm.nextIndex()].image}}"
+				ng-click="vm.nextImage()">
+	<md-button ng-click="vm.nextImage()">
+		<i class="material-icons">keyboard_arrow_right</i>
+	</md-button>
+</div>
+

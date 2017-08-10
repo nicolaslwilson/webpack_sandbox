@@ -1,0 +1,16 @@
+<div ng-if="vm.product.buyable == 'true'">
+	<div layout="column">
+		<md-input-container flex flex-gt-sm="50">
+			<label>Quantity</label>
+			<input type="number" ng-model="vm.quantity">
+		</md-input-container>
+		<div class="cart-buttons" layout="row">
+			<md-button class="md-raised pickup-in-store" ng-if="vm.availInStore" flex="50">Pick Up In Store</md-button>
+			<md-button class="md-raised add-to-cart" ng-if="vm.availOnline" flex="50">Add To Cart</md-button>
+		</div>
+	</div>
+
+
+
+</div>
+
